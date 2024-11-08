@@ -14,7 +14,7 @@ def ai_guess(remaining_combinations):
 
 def mastermind_ai_solver():
     # List of possible colors, expanded to allow for a larger variety
-    colors = ['R', 'G', 'B', 'Y', 'O', 'P', 'W', 'C']  # Red, Green, Blue, Yellow, Orange, Purple, White, Cyan
+    colors = ['R', 'G']  # Red, Green, Blue, Yellow, Orange, Purple, White, Cyan
     
     print("Welcome to Mastermind AI Solver!")
     print("The AI will try to guess your secret color code.")
@@ -42,7 +42,6 @@ def mastermind_ai_solver():
     start_time = time.time()  # Start the timer
 
     while True:
-        attempts += 1
         guess = ai_guess(all_combinations)
         guess_str = ''.join(guess)
         
@@ -56,7 +55,13 @@ def mastermind_ai_solver():
             break
 
         # Narrow down possible combinations based on feedback
-        all_combinations = [comb for comb in all_combinations if get_feedback(guess, comb) == (black_pegs, white_pegs)]
+        remaining_combinations = []
+        for comb in all_combinations:
+            attempts += 1
+            print(f"Attempt {attempts}: AI guessed {comb} -> Feedback: {black_pegs} black peg(s), {white_pegs} white peg(s)")
+            if get_feedback(guess, comb) == (black_pegs, white_pegs):
+                remaining_combinations.append(comb)
+        print(remaining_combinations)
 
 # Run the AI solver
 mastermind_ai_solver()
