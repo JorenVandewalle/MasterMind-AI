@@ -21,15 +21,17 @@ def mastermind_ai_solver():
     print("After each guess, provide feedback in the form of black and white pegs.")
     print("Black pegs indicate correct color in correct position.")
     print("White pegs indicate correct color in wrong position.\r\n")
+
     # Ask the player to enter the length of the color code
-    code_length = int(input(f"Enter the length of your color code."))
+    code_length = int(input(f"Enter the length of your color code: "))
+
     # Ask the player to enter a secret code
     code =  input(f"Enter your secret {code_length}-color code (e.g., RGBYOPWC): ").upper()
     
     # Validate that the code is the right length and uses valid colors
-    if len(code) != code_length or any(c not in colors for c in code):
+    while (len(code) != code_length or any(c not in colors for c in code)):
         print(f"Invalid code! Please use {code_length} colors from: {colors}.")
-        return
+        code = input(f"Enter your secret {code_length}-color code (e.g., RGBYOPWC): ").upper()
 
     # Create all possible combinations of colors (8 colors, 8 positions)
     all_combinations = list(itertools.product(colors, repeat=code_length))
