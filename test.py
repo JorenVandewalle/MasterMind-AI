@@ -1,5 +1,6 @@
 import random
 import itertools
+import time
 
 def get_feedback(code, guess):
     """Provides feedback: black pegs for correct color in correct position, white pegs for correct color in wrong position."""
@@ -30,6 +31,8 @@ def mastermind_ai_solver():
     
     print("\nAI is now trying to guess your code...\n")
 
+    start_time = time.time()  # Start the timer
+
     while True:
         attempts += 1
         guess = ai_guess(all_combinations)
@@ -39,7 +42,9 @@ def mastermind_ai_solver():
         print(f"Attempt {attempts}: AI guessed {guess_str} -> Feedback: {black_pegs} black peg(s), {white_pegs} white peg(s)")
 
         if black_pegs == code_length:
-            print(f"\nAI cracked the code {code} in {attempts} attempts!")
+            end_time = time.time()  # End the timer
+            duration = end_time - start_time
+            print(f"\nAI cracked the code {code} in {attempts} attempts and {duration:.2f} seconds!")
             break
 
         # Narrow down possible combinations based on feedback
