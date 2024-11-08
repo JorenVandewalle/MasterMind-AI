@@ -15,10 +15,16 @@ def ai_guess(remaining_combinations):
 def mastermind_ai_solver():
     # List of possible colors, expanded to allow for a larger variety
     colors = ['R', 'G', 'B', 'Y', 'O', 'P', 'W', 'C']  # Red, Green, Blue, Yellow, Orange, Purple, White, Cyan
-    code_length = 8  # We now have an 8-color code
     
+    print("Welcome to Mastermind AI Solver!")
+    print("The AI will try to guess your secret color code.")
+    print("After each guess, provide feedback in the form of black and white pegs.")
+    print("Black pegs indicate correct color in correct position.")
+    print("White pegs indicate correct color in wrong position.\r\n")
+    # Ask the player to enter the length of the color code
+    code_length = int(input(f"Enter the length of your color code."))
     # Ask the player to enter a secret code
-    code = input(f"Enter your secret {code_length}-color code (e.g., RGBYOPWC): ").upper()
+    code =  input(f"Enter your secret {code_length}-color code (e.g., RGBYOPWC): ").upper()
     
     # Validate that the code is the right length and uses valid colors
     if len(code) != code_length or any(c not in colors for c in code):
