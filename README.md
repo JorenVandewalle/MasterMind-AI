@@ -2,8 +2,8 @@
 
 ## the team
 
-Joren Vandewalle
-Sam De Wispelaere
+Joren Vandewalle 
+Sam De Wispelaere 
 Niels Denoo
 
 ## the task
