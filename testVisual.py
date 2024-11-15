@@ -2,18 +2,25 @@ import pygame
 import sys
 
 pygame.init()
-screen = pygame.display.set_mode((1000, 800))
+screen = pygame.display.set_mode((500, 800))
 pygame.display.set_caption("Mastermind")
 
 # Define colors
-WHITE = (255, 255, 255)
+BACKGROUND = (168, 181, 187)
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 
 # Button positions and colors
-button_radius = 40
-button_positions = [(140, 75), (280, 75), (420, 75), (560, 75), (700, 75), (840, 75)]
+button_radius = 30
+button_positions = [(100, 60), (250, 60), (400, 60), (100, 125), (250, 125), (400, 125)]
 button_colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (255, 165, 0), (128, 0, 128)]
+
+# Circles for position preset
+circle_radius = 8
+circle_positions = [(62, 262), (87, 262), (62, 287), (87, 287)]
+circle_colors = [(0, 0, 0), (0, 255, 255), (255, 0, 0), (0, 255, 0)]
+
+
 
 def draw_button():
     for position, color in zip(button_positions, button_colors):
@@ -21,18 +28,27 @@ def draw_button():
         pygame.draw.circle(screen, color, position, button_radius - 2)
 
 def draw_layout():
-    pygame.draw.rect(screen, WHITE, (50, 25, 900, 100))
-    pygame.draw.rect(screen, BLACK, (50, 25, 900, 100), 2)
+    # Draw the main area
+    pygame.draw.rect(screen, BACKGROUND, (50, 25, 400, 135))
+    pygame.draw.rect(screen, BLACK, (50, 25, 400, 135), 2)
 
-    for i in range(8):
-        pygame.draw.rect(screen, WHITE, (50, 175 + i * 70, 900, 50))
-        pygame.draw.rect(screen, BLACK, (50, 175 + i * 70, 900, 50), 2)
+    # Draw the rows for guesses
+    for i in range(7):
+        pygame.draw.rect(screen, BACKGROUND, (50, 250 + i * 70, 50, 50))
+        pygame.draw.rect(screen, BLACK, (50, 250 + i * 70, 50, 50), 2)
+        pygame.draw.rect(screen, BACKGROUND, (105, 250 + i * 70, 290, 50))
+        pygame.draw.rect(screen, BLACK, (105, 250 + i * 70, 290, 50), 2)
+        pygame.draw.rect(screen, BACKGROUND, (400, 250 + i * 70, 50, 50))
+        pygame.draw.rect(screen, BLACK, (400, 250 + i * 70, 50, 50), 2)
 
-    pygame.draw.rect(screen, WHITE, (950, 175, 50, 560))
-    pygame.draw.rect(screen, BLACK, (950, 175, 50, 560), 2)
+    # Draw the circles for position preset
+    for position, color in zip(circle_positions, circle_colors):
+        pygame.draw.circle(screen, BLACK, position, circle_radius)
+        pygame.draw.circle(screen, color, position, circle_radius)
 
-    pygame.draw.rect(screen, GREEN, (450, 800, 100, 50))
-    pygame.draw.rect(screen, BLACK, (450, 800, 100, 50), 2)
+    # Draw the play button
+    pygame.draw.rect(screen, GREEN, (200, 730, 100, 40))
+    pygame.draw.rect(screen, BLACK, (200, 730, 100, 40), 2)
 
 run = True
 while run:
@@ -44,8 +60,9 @@ while run:
                 for index, position in enumerate(button_positions):
                     if (position[0] - event.pos[0]) ** 2 + (position[1] - event.pos[1]) ** 2 <= button_radius ** 2:
                         print(f"Color {index} button clicked!")
-                if (450, 800) == (event.pos[0], event.pos[1]) or (450, 650) == (event.pos[0], event.pos[1]):
+                if (200 <= event.pos[0] <= 300) and (750 <= event.pos[1] <= 790):
                     print("Play button clicked!")
+                    button_colors[0] = ((214, 0, 221))
 
     screen.fill((68, 81, 87))
     draw_layout()
