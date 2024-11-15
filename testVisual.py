@@ -1,5 +1,6 @@
 import pygame
 import sys
+from solver import knuth_mastermind
 
 pygame.init()
 screen = pygame.display.set_mode((1000, 800))
