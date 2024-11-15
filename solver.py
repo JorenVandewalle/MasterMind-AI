@@ -3,9 +3,6 @@ from collections import Counter
 
 # Step 1: Generate all possible codes
 def generate_all_codes(colors, positions):
-    """
-    Generates all possible combinations of the given colors and positions.
-    """
     return list(itertools.product(colors, repeat=positions))
 
 # Step 2: Calculate feedback for a guess compared to the secret code
