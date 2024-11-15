@@ -67,7 +67,26 @@ We made or own little demo for player versus player if u want to try the game fo
 
 ## Simple step by step
 
+The following is a simple step-by-step explanation of how the algorithm finds the solution in a Mastermind game:
+
 ![Project Picture AI](./resources/images/Simple_Explenation.png)
+
+**Step 1:** To start of we make a list of all the possible color combinations. (if we use 6 colors and 4  6^4 = 6 * 6 * 6 * 6 = **1,296 possible codes** )
+
+ **Step 2:** Then we chose the best possible starting guees.
+
+ **Step 3:** After we chouse or first guees we get the feedback. If the feedback is 4 black pegs the game is finished. If not we continue.
+
+ **Step 4:** In this step we make the list of possible solutions smaller for more info on how we do that press here **(not yet)**
+
+ **Step 5:** 
+
+---
+
+
+
+
+
 
 
 
