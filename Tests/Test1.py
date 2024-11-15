@@ -70,6 +70,12 @@ def knuth_mastermind(secret_code, colors, positions):
     attempts = 0
 
     print("Knuth's Mastermind Solver")
+    print("enter a secret code of 5 digits between 1 and 6 with a space in between or enter q to quit")
+    print("enter q to quit")
+    tempCode = input()
+    if(tempCode == "q"):
+        return
+    secret_code = tuple(map(int, tempCode.split()))
     print(f"Secret code: {secret_code}")
 
     # Set of previously guessed codes to avoid repetition
@@ -107,9 +113,9 @@ def knuth_mastermind(secret_code, colors, positions):
 if __name__ == "__main__":
     # Parameters for Mastermind
     COLORS = [1, 2, 3, 4, 5, 6]  # Representing the 6 colors
-    POSITIONS = 4  # Number of positions in the code
+    POSITIONS = 5  # Number of positions in the code
 
     # Secret code to solve
-    secret_code = (3, 2, 4, 5)  # Example secret code
+    secret_code = (3, 4, 2, 5, 6)  # Example secret code
 
     knuth_mastermind(secret_code, COLORS, POSITIONS)
