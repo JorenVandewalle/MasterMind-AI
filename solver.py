@@ -3,9 +3,6 @@ from collections import Counter
 
 # Step 1: Generate all possible codes
 def generate_all_codes(colors, positions):
-    """
-    Generates all possible combinations of the given colors and positions.
-    """
     return list(itertools.product(colors, repeat=positions))
 
 # Step 2: Calculate feedback for a guess compared to the secret code
@@ -70,6 +67,13 @@ def knuth_mastermind(secret_code, colors, positions):
     attempts = 0
 
     print("Knuth's Mastermind Solver")
+    print("enter a secret code of 4 digits between (R G B Y O P) or enter q to quit")
+    print("enter q to quit")
+    tempCode = input().upper()
+    if tempCode == "Q":
+        return
+    tempCode = ' '.join(tempCode)
+    secret_code = tuple(tempCode.split())
     print(f"Secret code: {secret_code}")
 
     # Set of previously guessed codes to avoid repetition
@@ -106,10 +110,10 @@ def knuth_mastermind(secret_code, colors, positions):
 # Example usage:
 if __name__ == "__main__":
     # Parameters for Mastermind
-    COLORS = [1, 2, 3, 4, 5, 6]  # Representing the 6 colors
+    COLORS = ["R", "G", "B", "Y", "O", "P"]  # Representing the 6 colors
     POSITIONS = 4  # Number of positions in the code
 
     # Secret code to solve
-    secret_code = (3, 2, 4, 5)  # Example secret code
+    secret_code = ("P", "O", "Y", "R")  # Example secret code
 
     knuth_mastermind(secret_code, COLORS, POSITIONS)
