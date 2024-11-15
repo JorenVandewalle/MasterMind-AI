@@ -67,7 +67,7 @@ def knuth_mastermind(secret_code, colors, positions):
     attempts = 0
 
     print("Knuth's Mastermind Solver")
-    print("enter a secret code of 4 digits between (R G B Y O P) with a space in between or enter q to quit")
+    print("enter a secret code of 4 digits between (R G B Y O P) or enter q to quit")
     print("enter q to quit")
     tempCode = input().upper()
     if tempCode == "Q":
