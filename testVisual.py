@@ -28,57 +28,58 @@ circle_radiusLarge = 20
 circle_positionsPrCode = [(195, 205), (265, 205), (335, 205), (405, 205)]
 circle_colorsPrCode = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
-circle_positions1L = [(62, 262), (87, 262), (62, 287), (87, 287)]
-circle_colors1L = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
-circle_positions1R = [(412, 262), (437, 262), (412, 287), (437, 287)]
-circle_colors1R = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions1LBlack = [(62, 262), (87, 262), (62, 287), (87, 287)]
+circle_colors1LBlack = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions1RWhite = [(412, 262), (437, 262), (412, 287), (437, 287)]
+circle_colors1RWhite = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+
 circle_positions1 = [(145, 275), (215, 275), (285, 275), (355, 275)]
 circle_colors1 = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
-circle_positions2L = [(62, 332), (87, 332), (62, 357), (87, 357)]
-circle_colors2L = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
-circle_positions2R = [(412, 332), (437, 332), (412, 357), (437, 357)]
-circle_colors2R = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions2LBlack = [(62, 332), (87, 332), (62, 357), (87, 357)]
+circle_colors2LBlack = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions2RWhite = [(412, 332), (437, 332), (412, 357), (437, 357)]
+circle_colors2RWhite = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
 circle_positions2 = [(145, 345), (215, 345), (285, 345), (355, 345)]
 circle_colors2 = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
-circle_positions3L = [(62, 402), (87, 402), (62, 427), (87, 427)]
-circle_colors3L = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
-circle_positions3R = [(412, 402), (437, 402), (412, 427), (437, 427)]
-circle_colors3R =[(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions3LBlack = [(62, 402), (87, 402), (62, 427), (87, 427)]
+circle_colors3LBlack = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions3RWhite = [(412, 402), (437, 402), (412, 427), (437, 427)]
+circle_colors3RWhite =[(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
 circle_positions3 = [(145, 415), (215, 415), (285, 415), (355, 415)]
 circle_colors3 = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
-circle_positions4L = [(62, 472), (87, 472), (62, 497), (87, 497)]
-circle_colors4L = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
-circle_positions4R = [(412, 472), (437, 472), (412, 497), (437, 497)]
-circle_colors4R = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions4LBlack = [(62, 472), (87, 472), (62, 497), (87, 497)]
+circle_colors4LBlack = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions4RWhite = [(412, 472), (437, 472), (412, 497), (437, 497)]
+circle_colors4RWhite = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
 circle_positions4 = [(145, 485), (215, 485), (285, 485), (355, 485)]
 circle_colors4 = [(128 , 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
-circle_positions5L = [(62, 542), (87, 542), (62, 567), (87, 567)]
-circle_colors5L = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
-circle_positions5R = [(412, 542), (437, 542), (412, 567), (437, 567)]
-circle_colors5R = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions5LBlack = [(62, 542), (87, 542), (62, 567), (87, 567)]
+circle_colors5LBlack = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions5RWhite = [(412, 542), (437, 542), (412, 567), (437, 567)]
+circle_colors5RWhite = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
 circle_positions5 = [(145, 555), (215, 555), (285, 555), (355, 555)]
 circle_colors5 = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
-circle_positions6L = [(62, 612), (87, 612), (62, 637), (87, 637)]
-circle_colors6L = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
-circle_positions6R = [(412, 612), (437, 612), (412, 637), (437, 637)]
-circle_colors6R = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions6LBlack = [(62, 612), (87, 612), (62, 637), (87, 637)]
+circle_colors6LBlack = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions6RWhite = [(412, 612), (437, 612), (412, 637), (437, 637)]
+circle_colors6RWhite = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
 circle_positions6 = [(145, 625), (215, 625), (285, 625), (355, 625)]
 circle_colors6 = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
-circle_positions7L = [(62, 682), (87, 682), (62, 707), (87, 707)]
-circle_colors7L = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
-circle_positions7R = [(412, 682), (437, 682), (412, 707), (437, 707)]
-circle_colors7R = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions7LBlack = [(62, 682), (87, 682), (62, 707), (87, 707)]
+circle_colors7LBlack = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
+circle_positions7RWhite = [(412, 682), (437, 682), (412, 707), (437, 707)]
+circle_colors7RWhite = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
 
 circle_positions7 = [(145, 695), (215, 695), (285, 695), (355, 695)]
 circle_colors7 = [(128, 141, 147), (128, 141, 147), (128, 141, 147), (128, 141, 147)]
@@ -113,20 +114,20 @@ def draw_layout():
 
     # Draw the small circles for the positions preset
     circle_groupsSmall = [
-        (circle_positions1L, circle_colors1L),
-        (circle_positions1R, circle_colors1R),
-        (circle_positions2L, circle_colors2L),
-        (circle_positions2R, circle_colors2R),
-        (circle_positions3L, circle_colors3L),
-        (circle_positions3R, circle_colors3R),
-        (circle_positions4L, circle_colors4L),
-        (circle_positions4R, circle_colors4R),
-        (circle_positions5L, circle_colors5L),
-        (circle_positions5R, circle_colors5R),
-        (circle_positions6L, circle_colors6L),
-        (circle_positions6R, circle_colors6R),
-        (circle_positions7L, circle_colors7L),
-        (circle_positions7R, circle_colors7R),
+        (circle_positions1LBlack, circle_colors1LBlack),
+        (circle_positions1RWhite, circle_colors1RWhite),
+        (circle_positions2LBlack, circle_colors2LBlack),
+        (circle_positions2RWhite, circle_colors2RWhite),
+        (circle_positions3LBlack, circle_colors3LBlack),
+        (circle_positions3RWhite, circle_colors3RWhite),
+        (circle_positions4LBlack, circle_colors4LBlack),
+        (circle_positions4RWhite, circle_colors4RWhite),
+        (circle_positions5LBlack, circle_colors5LBlack),
+        (circle_positions5RWhite, circle_colors5RWhite),
+        (circle_positions6LBlack, circle_colors6LBlack),
+        (circle_positions6RWhite, circle_colors6RWhite),
+        (circle_positions7LBlack, circle_colors7LBlack),
+        (circle_positions7RWhite, circle_colors7RWhite),
     ]
     
     for positions, colors in circle_groupsSmall:
