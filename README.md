@@ -77,9 +77,11 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 
  **Step 3:** After we chouse or first guees we get the feedback. If the feedback is 4 black pegs the game is finished. If not we continue.
 
- **Step 4:** This step we decide what solutions are possible and what not for more info press here **(not yet)**
+ **Step 4:** This step we decide what solutions are possible and what not for more info press [here](./docs/Knuth_Algorithm_Explained.md)
 
- **Step 5:**  
+ **Step 5:**  We delete al the codes that are no longer the possible answer.
+
+  **Step 6:**  Using the min-max strategy, we can make the best possible next guess to eliminate the maximum number of answers. For more info press here [here](./docs/MinMaxExplained.md)
 
 ---
 
