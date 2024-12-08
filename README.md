@@ -77,9 +77,9 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 
  **Step 3:** After we chouse or first guees we get the feedback. If the feedback is 4 black pegs the game is finished. If not we continue.
 
- **Step 4:** In this step we make the list of possible solutions smaller for more info on how we do that press here **(not yet)**
+ **Step 4:** This step we decide what solutions are possible and what not for more info press here **(not yet)**
 
- **Step 5:** 
+ **Step 5:**  
 
 ---
 
