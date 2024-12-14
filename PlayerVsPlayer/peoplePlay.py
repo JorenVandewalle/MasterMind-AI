@@ -1,3 +1,8 @@
+import os
+
+def clear_terminal():
+    os.system('cls')
+
 def get_feedback(code, guess):
     """Provides feedback: black pegs for correct color in correct position, white pegs for correct color in wrong position."""
     black_pegs = sum([c == g for c, g in zip(code, guess)])  # Correct color & position
@@ -25,6 +30,8 @@ def mastermind_game():
     while (len(code) != code_length or any(c not in colors for c in code)):
         print(f"Invalid code! Please use {code_length} colors from: {colors}.")
         code = input(f"Enter your secret {code_length}-color code (using colors: {', '.join(colors)}): ").upper()
+
+    clear_terminal()
 
     # Player 2 starts guessing the code
     attempts = 0
