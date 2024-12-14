@@ -54,7 +54,7 @@ For each subsequent guess:
 ### Step 4: Make the Next Guess
 
 - From the remaining candidate codes, select a guess.
-  - You can select the first candidate in the remaining list or use some strategy to maximize the chances of eliminating more incorrect codes.
+  - You can select the first candidate in the remaining list or use some strategy to maximize the chances of eliminating more incorrect codes. (we will use a min-max strategie for this explained later)
 
 - Submit this guess to the game and receive feedback.
 
@@ -111,12 +111,12 @@ Let's go step by step with an example to illustrate Knuth's algorithm.
 
 ### Guess 1
 
-- **Initial Guess**: `1122` (as per Knuth's common starting guess).
+- **Initial Guess**: `RRBB` (a common starting guess in Knuth's algorithm).
 - Submit this guess to the game and get feedback: say, **1 black peg and 1 white peg**.
 
 ### Eliminate Inconsistent Codes
 
-- Compare every code in the candidate list (1296 possibilities) with your guess `1122`.
+- Compare every code in the candidate list (1296 possibilities) with your guess `RRBB`.
 - Remove all codes that do not result in the same feedback (1 black peg and 1 white peg).
 
 ### Guess 2
@@ -130,3 +130,5 @@ Let's go step by step with an example to illustrate Knuth's algorithm.
 - After a few iterations, you'll eventually guess **`RGBY`** and receive **4 black pegs**, meaning you've correctly identified the secret code.
 
 By following this systematic elimination process based on Knuth's algorithm, you have minimized the guesses required to determine the secret code efficiently and accurately.
+
+
