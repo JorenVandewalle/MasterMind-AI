@@ -6,6 +6,13 @@
 - **Sam De Wispelaere**
 - **Niels Denoo**
 
+## Objective
+### Main objective
+We aim to create an AI that can solve a game of masterminde in as least possible moves.
+### Sub-objectives
+- Make it visualized and not only in the console
+
+
 ## The Task
 
 We aim to create an AI that can guess the correct 4-letter code representing colors, similar to the classic Mastermind game. The project will be developed using Python.
