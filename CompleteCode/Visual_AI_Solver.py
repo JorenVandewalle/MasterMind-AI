@@ -52,7 +52,8 @@ feedback = (0, 0)
 
 
 def calculate_feedback(guess, code):
-    black_pins = sum(g == c for g, c in zip(guess, code))
+    black_pins = sum
+    (g == c for g, c in zip(guess, code))
     white_pins = sum((Counter(code) & Counter(guess)).values()) - black_pins
     return black_pins, white_pins
 
