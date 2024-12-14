@@ -110,7 +110,7 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 
 **Step 5:** We eliminate all the codes that are no longer possible answers.
 
-**Step 6:** Using the min-max strategy, we can make the best possible next guess to eliminate the maximum number of answers. For more info, see [here](./docs/MinMaxExplained.md). Do u want to know how we did that in code press. [here](./docs/Codes_Explained/MinMaxCodeExplained.ipynb)
+**Step 6:** Using the **min-max** strategy, we can make the best possible next guess to eliminate the maximum number of answers. For more info, see [here](./docs/MinMaxExplained.md). Do u want to know how we did that in code press. [here](./docs/Codes_Explained/MinMaxCodeExplained.ipynb)
 
 ----
 
