@@ -115,3 +115,19 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 ----
 
 ### 5. How can we visualize this game?
+
+
+## Expantions
+
+- We could make the PvP mode visualized aswell
+- We could add a timers for how long the Algorithm takes to solve the code.
+- We could make the AI so its maybe faster but it needs more guesses. 
+
+## Conclusion
+
+- We made an AI that can solve Masterminde everytime in 5 or less guesses 
+- We visualized the game
+- There is a player vs player mode
+- There is a lot of documentation
+
+So in the end i think we did everything we set out to do. 
