@@ -83,7 +83,7 @@ The game ends when the codebreaker correctly guesses the secret code or when the
    - Powerpoint
 
 ### 3. How do we make the Mastermind game in code?
-For this we will start of by making an player versus player masterminde game. Just like the real game. For more info on the code we used for this press [here](./docs/Knuth_Algorithm_Explained.md)..  
+For this we will start of by making an player versus player masterminde game. Just like the real game. For more info on the code we used for this press [here](./docs/Codes_Explained/PlayerVsPlayer.ipynb)..  
 
 ### 4. How do we make the AI to solve this?
 
