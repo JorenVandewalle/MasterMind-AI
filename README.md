@@ -87,7 +87,7 @@ For this we will start of by making an player versus player masterminde game. Ju
 
 ### 4. How do we make the AI to solve this?
 
-## Simple step by step
+#### Simple step by step
 
 The following is a simple step-by-step explanation of how the algorithm finds the solution in a Mastermind game:
 
