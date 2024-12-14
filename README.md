@@ -83,7 +83,7 @@ The game ends when the codebreaker correctly guesses the secret code or when the
    - Powerpoint
 
 ### 3. How do we make the Mastermind game in code?
-For this we will start of by making an player versus player masterminde game. Just like the real game. For more info on the code we used for this press [here](./docs/Codes_Explained/PlayerVsPlayer.ipynb).The code itself can be found here [here](./PlayerVsPlayer/peoplePlay.py)
+For this we will start of by making an player versus player masterminde game. Just like the real game. For more info on the code we used for this press [here](./docs/Codes_Explained/PlayervsPlayer.ipynb).The code itself can be found here [here](./PlayerVsPlayer/peoplePlay.py)
 
 ### 4. How do we make the AI to solve this?
 
@@ -99,11 +99,11 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 
 **Step 3:** After our first guess, we get feedback. If the feedback is 4 black pegs, the game is finished. If not, we continue.
 
-**Step 4:** This step involves deciding which solutions are possible and which are not. For more info, see [here](./docs/Knuth_Algorithm_Explained.md).
+**Step 4:** This step involves deciding which solutions are possible and which are not.For that we use **Knuth Algorythm** for more info, see [here](./docs/Knuth_Algorithm_Explained.md). Explaination for how we do that in code can be found [here](./docs/Codes_Explained/KnuthCodeExplained.ipynb)
 
 **Step 5:** We eliminate all the codes that are no longer possible answers.
 
-**Step 6:** Using the min-max strategy, we can make the best possible next guess to eliminate the maximum number of answers. For more info, see [here](./docs/MinMaxExplained.md).
+**Step 6:** Using the min-max strategy, we can make the best possible next guess to eliminate the maximum number of answers. For more info, see [here](./docs/MinMaxExplained.md). Do u want to know how we did that in code press. [here](./docs/Codes_Explained/MinMaxCodeExplained.ipynb)
 
 ---
 

@@ -29,7 +29,7 @@ def filter_possible_codes(possible_codes, guess, feedback):
     ]
 
 # Step 4: Determine the "minimax" guess
-def choose_next_guess(possible_codes, all_codes):
+def choose_next_guess(possible_codes):
     """
     Uses the minimax strategy to select the next guess.
     Tries every possible guess from the remaining possible codes and chooses the one that minimizes the worst-case number
@@ -63,12 +63,11 @@ def knuth_mastermind(secret_code, colors, positions):
     possible_codes = all_codes[:]  # Start with all codes as possible solutions
 
     # Initial guess
-    guess = tuple(colors[:2] * (positions // 2))  # E.g., (1, 1, 2, 2)
+    guess ='R', 'R', 'G', 'G'
     attempts = 0
 
     print("Knuth's Mastermind Solver")
     print("enter a secret code of 4 digits between (R G B Y O P) or enter q to quit")
-    print("enter q to quit")
     tempCode = input().upper()
     if tempCode == "Q":
         return
@@ -99,7 +98,7 @@ def knuth_mastermind(secret_code, colors, positions):
         guessed_codes.add(guess)
 
         # Choose the next guess from remaining possible codes
-        guess = choose_next_guess(possible_codes, possible_codes)
+        guess = choose_next_guess(possible_codes)
 
         # Ensure that the new guess isn't a repeat of a previous guess
         while guess in guessed_codes:
