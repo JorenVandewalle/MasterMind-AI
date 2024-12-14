@@ -7,9 +7,13 @@
 - **Niels Denoo**
 
 ## Objective
-### Main objective
+
+### Main Goal
+
 - We aim to create an AI that can solve the 4 colors long code from a game of masterminde in the least possible moves.
-### Sub-objectives
+
+### Sub Goals
+
 - Make it visualized and not only in the console.
 - Make a player versus player mode(can be in console).
 - Document everything properly so other people can learn from our experience
@@ -24,8 +28,8 @@
 4. How do we make the AI to solve this?
 5. How can we visualize this game?
 
-
 ----
+
 ### 1. Mastermind Game Rules
 
 #### Objective
@@ -72,17 +76,21 @@ The game ends when the codebreaker correctly guesses the secret code or when the
 
 ### 2. Who does what in the team?
 
-- **Joren Vandewalle:** 
-   - Visuals 
+- **Joren Vandewalle:**
+  
+   - Visuals
    - Poweroint
+
 - **Sam De Wispelaere:**
    - Coding the game itself(in console)
    - Coding the AI solver
-- **Niels Denoo** 
-   - Combining the visuals with the game 
+- **Niels Denoo**
+   - Combining the visuals with the game
+   - Coding pvp mode
    - Powerpoint
 
 ### 3. How do we make the Mastermind game in code?
+
 For this we will start of by making an player versus player masterminde game. Just like the real game. For more info on the code we used for this press [here](./docs/Codes_Explained/PlayerVsPlayer.ipynb).The code itself can be found here [here](./PlayerVsPlayer/peoplePlay.py)
 
 ### 4. How do we make the AI to solve this?
@@ -105,9 +113,6 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 
 **Step 6:** Using the min-max strategy, we can make the best possible next guess to eliminate the maximum number of answers. For more info, see [here](./docs/MinMaxExplained.md).
 
----
+----
 
 ### 5. How can we visualize this game?
-
-
-
