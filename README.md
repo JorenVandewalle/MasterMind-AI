@@ -83,12 +83,9 @@ The game ends when the codebreaker correctly guesses the secret code or when the
    - Powerpoint
 
 ### 3. How do we make the Mastermind game in code?
-For this we will start of by making an player versus player masterminde game. Just like the real game. For more info on the code we used for this press [here](./docs/Codes_Explained/PlayerVsPlayer.ipynb)..  
+For this we will start of by making an player versus player masterminde game. Just like the real game. For more info on the code we used for this press [here](./docs/Codes_Explained/PlayerVsPlayer.ipynb).The code itself can be found here [here](./PlayerVsPlayer/peoplePlay.py)
 
 ### 4. How do we make the AI to solve this?
-
-### 5. How can we visualize this game?
-
 
 ## Simple step by step
 
@@ -110,13 +107,7 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 
 ---
 
+### 5. How can we visualize this game?
 
-### Player versus player
-
-We have developed a simple demo for player versus player mode if you'd like to try the game for yourself.
-
-[Try the player vs player](./PlayerVsPlayer/peoplePlay.py)
-
----
 
 
