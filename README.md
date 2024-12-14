@@ -77,13 +77,13 @@ The game ends when the codebreaker correctly guesses the secret code or when the
 ### 2. Who does what in the team?
 
 - **Joren Vandewalle:**
-  
    - Visuals
    - Poweroint
 
 - **Sam De Wispelaere:**
-   - Coding the game itself(in console)
    - Coding the AI solver
+   - Coding pvp mode
+
 - **Niels Denoo**
    - Combining the visuals with the game
    - Coding pvp mode
