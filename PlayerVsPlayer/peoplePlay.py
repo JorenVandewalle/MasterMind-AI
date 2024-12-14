@@ -1,5 +1,3 @@
-import itertools
-
 def get_feedback(code, guess):
     """Provides feedback: black pegs for correct color in correct position, white pegs for correct color in wrong position."""
     black_pegs = sum([c == g for c, g in zip(code, guess)])  # Correct color & position
@@ -8,21 +6,21 @@ def get_feedback(code, guess):
 
 def mastermind_game():
     # List of possible colors
-    colors = ['R', 'G', 'B', 'Y']  # Red, Green, Blue, Yellow, Orange, Purple, White, Cyan
-    
+    colors = ['R', 'G', 'B', 'Y', 'O', 'P']  # Red, Green, Blue, Yellow, Orange, Purple
+
     print("Welcome to Mastermind!\n")
     print("One player will create a secret color code, and the other player will try to guess it.")
     print("After each guess, feedback will be provided in the form of black and white pegs.")
     print("Black pegs indicate correct color in the correct position.")
     print("White pegs indicate correct color but in the wrong position.\n")
 
-    # Ask the first player to enter the length of the color code
-    code_length = int(input(f"Enter the length of your color code (max 4): "))
+    # Set the length of the code to always be 4
+    code_length = 4
 
     # Player 1 enters a secret code
     print("\nPlayer 1, create your secret code (don't tell Player 2!).")
     code = input(f"Enter your secret {code_length}-color code (using colors: {', '.join(colors)}): ").upper()
-    
+
     # Validate that the code is the right length and uses valid colors
     while (len(code) != code_length or any(c not in colors for c in code)):
         print(f"Invalid code! Please use {code_length} colors from: {colors}.")
@@ -44,7 +42,7 @@ def mastermind_game():
         # Get feedback for the guess
         black_pegs, white_pegs = get_feedback(code, guess)
         print(f"Feedback: {black_pegs} black peg(s), {white_pegs} white peg(s)\n")
-        
+
         attempts += 1
 
         if black_pegs == code_length:
@@ -53,3 +51,4 @@ def mastermind_game():
 
 # Run the game
 mastermind_game()
+
