@@ -10,13 +10,13 @@
 
 ### Main Goal
 
-- We aim to create an AI that can solve the 4 colors long code from a game of masterminde in the least possible moves.
+- We aim to create an AI that can solve the 4 colors long code from a game of mastermind in the least possible moves.
 
 ### Sub Goals
 
 - Make it visualized and not only in the console.
 - Make a player versus player mode(can be in console).
-- Document everything properly so other people can learn from our experience
+- Document everything properly so other people can learn from our experience.
 
 ----
 
@@ -116,6 +116,45 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 
 ### 5. How can we visualize this game?
 
+#### What did we want
+
+We wanted to make the game visualized so that it looks similar to the mastermind board game, but then in a more modern way. 
+Mastermind board:
+
+![Mastermind Board](./resources/images/mastermind_board.jpg)
+
+#### How did we do it
+
+We used pygame to visualize the game, we added the color buttons to fill in the private code and added space for the guesses and feedback. We used buttons to play and restart the game.
+
+##### Pygame
+
+We used pygame to make the visualization. This is a python library that allows you to make games. We used it to make the game more interactive and fun. First we had to make a game window, we used a 500 by 850 size to get a more vertical game. Then we chose the styling like the background color, text size and color.
+
+##### Colors buttons
+
+We created buttons for each color so that the player can fill in the private code. When a color button is clicked, the color is added to the private code. 
+
+##### Guesses and feedback
+
+We tried to create the same layout as the mastermind board game. We added 4 big circles in the middle for the guesses, and on the side there are 4 smaller circles for the feedback pegs. When a guess is made, the guesses and the feedback are updated.
+
+##### Play and restart buttons
+
+The last thing we added was a play and restart button. This makes it easy for the player to start a new game or play again.
+
+##### Problems we faced
+
+We didnt know how pygame worked, so we had to find out how we would use it. The first styling we had was allot of hardcoded values, later on we changed the code and knwo it is more readable.
+
+##### Result
+
+After allot of trying and testing we got a game that has allot of the same layout of the board game and it is easy to use. This is the result:
+![Visualization](./resources/images/full_game.png)
+
+The code with first styling can be found [here](testVisual.py)
+
+----
 
 ## Expantions
 
