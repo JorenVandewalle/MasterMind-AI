@@ -54,45 +54,33 @@ def choose_next_guess(possible_codes):
     return best_guess
 
 # Step 5: Main game loop
-def knuth_mastermind(secret_code, colors, positions):
+def solve_code(secret_code, colors, positions):
     """
-    Implements Knuth's Five-Guess Algorithm to solve the secret code.
+    Solves a single secret code using Knuth's Five-Guess Algorithm.
+    Returns the number of attempts needed to solve the code.
     """
     # Generate all possible codes and guesses
     all_codes = generate_all_codes(colors, positions)
     possible_codes = all_codes[:]  # Start with all codes as possible solutions
 
     # Initial guess
-    guess = 'R', 'R', 'G', 'G'
+    guess = ('R', 'R', 'G', 'G')
     attempts = 0
-
-    print("Knuth's Mastermind Solver")
-    print("enter a secret code of 4 digits between (R G B Y O P) or enter q to quit")
-    tempCode = input().upper()
-    if tempCode == "Q":
-        return
-    tempCode = ' '.join(tempCode)
-    secret_code = tuple(tempCode.split())
-    print(f"Secret code: {secret_code}")
 
     # Set of previously guessed codes to avoid repetition
     guessed_codes = set()
 
     while True:
         attempts += 1
-        print(f"\nAttempt {attempts}: Guessing {guess}")
 
         # Get feedback
         feedback = calculate_feedback(guess, secret_code)
-        print(f"Feedback: {feedback[0]} black pins, {feedback[1]} white pins")
 
         if feedback == (positions, 0):  # All black pins means the guess is correct
-            print(f"Secret code {secret_code} solved in {attempts} attempts!")
-            break
+            return attempts
 
         # Eliminate impossible codes based on feedback
         possible_codes = filter_possible_codes(possible_codes, guess, feedback)
-        print(f"Remaining possibilities: {len(possible_codes)}")
 
         # Add the current guess to the set of guessed codes to avoid repetitions
         guessed_codes.add(guess)
@@ -102,17 +90,35 @@ def knuth_mastermind(secret_code, colors, positions):
 
         # Ensure that the new guess isn't a repeat of a previous guess
         while guess in guessed_codes:
-            print("Repeating guess detected, choosing a new one...")
             possible_codes.remove(guess)
             guess = choose_next_guess(possible_codes)
 
-# Example usage:
+# Step 6: Test all possible codes
+def test_all_codes(colors, positions):
+    """
+    Tests Knuth's algorithm on all possible secret codes.
+    Prints the results and identifies codes that took more than 5 attempts to solve.
+    """
+    all_codes = generate_all_codes(colors, positions)
+    results = {}
+
+    for secret_code in all_codes:
+        attempts = solve_code(secret_code, colors, positions)
+        results[secret_code] = attempts
+        print(f"Tested code: {secret_code}, Attempts: {attempts}")
+
+    # Identify codes that took more than 5 attempts
+    hard_codes = [code for code, attempts in results.items() if attempts > 5]
+
+    print(f"\nTotal codes tested: {len(all_codes)}")
+    print(f"Codes that took more than 5 attempts: {len(hard_codes)}")
+    for code in hard_codes:
+        print(f"Code {code} took {results[code]} attempts")
+
+# Example usage
 if __name__ == "__main__":
-    # Parameters for Mastermind
     COLORS = ["R", "G", "B", "Y", "O", "P"]  # Representing the 6 colors
     POSITIONS = 4  # Number of positions in the code
 
-    # Secret code to solve
-    secret_code = ("P", "O", "Y", "R")  # Example secret code
+    test_all_codes(COLORS, POSITIONS)
 
-    knuth_mastermind(secret_code, COLORS, POSITIONS)
