@@ -54,7 +54,7 @@ For each subsequent guess:
 ### Step 4: Make the Next Guess
 
 - From the remaining candidate codes, select a guess.
-  - You can select the first candidate in the remaining list or use some strategy to maximize the chances of eliminating more incorrect codes. (we will use a min-max strategie for this explained later)
+  - You can select the first candidate in the remaining list or use some strategy to maximize the chances of eliminating more incorrect codes. (we will use a min-max strategy for this explained later)
 
 - Submit this guess to the game and receive feedback.
 
