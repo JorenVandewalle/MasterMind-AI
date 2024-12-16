@@ -90,6 +90,7 @@ The game ends when the codebreaker correctly guesses the secret code or when the
    - Powerpoint
 
 ### 3. How do we make the Mastermind game in code?
+
 For this we will start of by making an player versus player masterminde game. Just like the real game. For more info on the code we used for this press [here](./docs/Codes_Explained/PlayerVsPlayer.ipynb).The code itself can be found here [here](./PlayerVsPlayer/peoplePlay.py)
 
 ### 4. How do we make the AI to solve this?
@@ -160,13 +161,21 @@ The code with first styling can be found [here](testVisual.py)
 
 - We could make the PvP mode visualized aswell
 - We could add a timers for how long the Algorithm takes to solve the code.
-- We could make the AI so its maybe faster but it needs more guesses. 
+- We could make the AI so its maybe faster but it needs more guesses.
 
 ## Conclusion
 
-- We made an AI that can solve Masterminde everytime in 5 or less guesses 
+- We made an AI that can solve Masterminde everytime in 5 or less guesses
 - We visualized the game
 - There is a player vs player mode
 - There is a lot of documentation
 
-So in the end i think we did everything we set out to do. 
+So in the end i think we did everything we set out to do.
+
+## Bibliografie
+
+Knuth algorithm
+[StackOverflow](https://stackoverflow.com/questions/62430071/donald-knuth-algorithm-mastermind)
+
+Voorbeeld mastermind game
+[Github](https://github.com/NathanDuran/Mastermind-Five-Guess-Algorithm)

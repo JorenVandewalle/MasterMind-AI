@@ -89,8 +89,7 @@ def ai_step():
     if not game_started:
         return
 
-    # Add a small delay before displaying the next guess
-    pygame.time.wait(500)  # Wait for 500 milliseconds (0.5 seconds)
+    pygame.time.wait(500)
 
     # Calculate feedback and display the guess
     feedback = calculate_feedback(ai_guess, tuple(secret_code))
