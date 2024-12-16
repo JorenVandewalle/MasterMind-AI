@@ -150,6 +150,15 @@ The last thing we added was a play and restart button. This makes it easy for th
 
 We didnt know how pygame worked, so we had to find out how we would use it. The first styling we had was allot of hardcoded values, later on we changed the code and knwo it is more readable.
 
+##### .exe file
+
+To make it easy to play the game we also made an .exe file. This is done with the `pyinstaller` library. This library can convert python code into an .exe file. This will automatically install all the required libraries and only open up the main game without a console.
+
+1. Install pyinstaller: `pip install pyinstaller`
+2. Go to the file directory: `cd your/file/directory/`
+3. Make the .exe file: `python -m PyInstaller --noconsole --onefile your_file_name.py`
+4. You can find the .exe file in the **dist** folder.
+
 ##### Result
 
 After allot of trying and testing we got a game that has allot of the same layout of the board game and it is easy to use. This is the result:
