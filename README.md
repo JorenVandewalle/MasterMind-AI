@@ -30,6 +30,8 @@
 
 ----
 
+## Analyze
+
 ### 1. Mastermind Game Rules
 
 #### Objective
@@ -136,7 +138,7 @@ We used pygame to make the visualization. This is a python library that allows y
 
 ##### Colors buttons
 
-We created buttons for each color so that the player can fill in the private code. When a color button is clicked, the color is added to the private code. 
+We created buttons for each color so that the player can fill in the private code. When a color button is clicked, the color is added to the private code.
 
 ##### Guesses and feedback
 
@@ -159,7 +161,7 @@ To make it easy to play the game we also made an .exe file. This is done with th
 3. Make the .exe file: `python -m PyInstaller --noconsole --onefile your_file_name.py`
 4. You can find the .exe file in the **dist** folder.
 
-##### Result
+## Result
 
 After allot of trying and testing we got a game that has allot of the same layout of the board game and it is easy to use. This is the result:
 ![Visualization](./resources/images/full_game.png)
@@ -168,7 +170,7 @@ The code with first styling can be found [here](testVisual.py)
 
 ----
 
-## Expantions
+## Expansions
 
 - We could make the PvP mode visualized aswell
 - We could add a timers for how long the Algorithm takes to solve the code.
