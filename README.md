@@ -30,6 +30,8 @@
 
 ----
 
+## Analyze
+
 ### 1. Mastermind Game Rules
 
 #### Objective
@@ -79,13 +81,14 @@ The game ends when the codebreaker correctly guesses the secret code or when the
 - **Joren Vandewalle:**
    - Visuals
    - Poweroint
+   - Documentatie
 
 - **Sam De Wispelaere:**
    - Coding the AI solver
    - Coding pvp mode
    - Documentatie
 
-- **Niels Denoo**
+- **Niels Denoo:**
    - Combining the visuals with the game
    - Coding pvp mode
    - Powerpoint
@@ -93,7 +96,7 @@ The game ends when the codebreaker correctly guesses the secret code or when the
 
 ### 3. How do we make the Mastermind game in code?
 
-For this we will start of by making an player versus player masterminde game. Just like the real game. For more info on the code we used for this press [here](./docs/Codes_Explained/PlayerVsPlayer.ipynb).The code itself can be found here [here](./PlayerVsPlayer/peoplePlay.py)
+For this we will start of by making a player versus player mastermind game. Just like the real game. For more info on the code we used for this press [here](./docs/Codes_Explained/PlayerVsPlayer.ipynb). The code itself can be found here [here](./PlayerVsPlayer/peoplePlay.py)
 
 ### 4. How do we make the AI to solve this?
 
@@ -109,7 +112,7 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 
 **Step 3:** After our first guess, we get feedback. If the feedback is 4 black pegs, the game is finished. If not, we continue.
 
-**Step 4:** This step involves deciding which solutions are possible and which are not.For that we use **Knuth Algorythm** for more info, see [here](./docs/Knuth_Algorithm_Explained.md). Explaination for how we do that in code can be found [here](./docs/Codes_Explained/KnuthCodeExplained.ipynb)
+**Step 4:** This step involves deciding which solutions are possible and which are not. For that we use **Knuth Algorythm** for more info, see [here](./docs/Knuth_Algorithm_Explained.md). Explanation for how we do that in code can be found [here](./docs/Codes_Explained/KnuthCodeExplained.ipynb).
 
 **Step 5:** We eliminate all the codes that are no longer possible answers.
 
@@ -121,7 +124,7 @@ The following is a simple step-by-step explanation of how the algorithm finds th
 
 #### What did we want
 
-We wanted to make the game visualized so that it looks similar to the mastermind board game, but then in a more modern way. 
+We wanted to make the game visualized so that it looks similar to the mastermind board game, but then in a more modern way.
 Mastermind board:
 
 ![Mastermind Board](./resources/images/mastermind_board.jpg)
@@ -136,7 +139,7 @@ We used pygame to make the visualization. This is a python library that allows y
 
 ##### Colors buttons
 
-We created buttons for each color so that the player can fill in the private code. When a color button is clicked, the color is added to the private code. 
+We created buttons for each color so that the player can fill in the private code. When a color button is clicked, the color is added to the private code.
 
 ##### Guesses and feedback
 
@@ -148,9 +151,18 @@ The last thing we added was a play and restart button. This makes it easy for th
 
 ##### Problems we faced
 
-We didnt know how pygame worked, so we had to find out how we would use it. The first styling we had was allot of hardcoded values, later on we changed the code and knwo it is more readable.
+We didn't know how pygame worked, so we had to find out how we would use it. The first styling we had was allot of hardcoded values, later on we changed the code and know it is more readable.
 
-##### Result
+##### .exe file
+
+To make it easy to play the game we also made an .exe file. This is done with the `pyinstaller` library. This library can convert python code into an .exe file. This will automatically install all the required libraries and only open up the main game without a console.
+
+1. Install pyinstaller: `pip install pyinstaller`
+2. Go to the file directory: `cd your/file/directory/`
+3. Make the .exe file: `python -m PyInstaller --noconsole --onefile your_file_name.py`
+4. You can find the .exe file in the **dist** folder.
+
+## Result
 
 After allot of trying and testing we got a game that has allot of the same layout of the board game and it is easy to use. This is the result:
 ![Visualization](./resources/images/full_game.png)
@@ -159,15 +171,15 @@ The code with first styling can be found [here](testVisual.py)
 
 ----
 
-## Expantions
+## Expansions
 
-- We could make the PvP mode visualized aswell
+- We could make the PvP mode visualized as well
 - We could add a timers for how long the Algorithm takes to solve the code.
 - We could make the AI so its maybe faster but it needs more guesses.
 
 ## Conclusion
 
-- We made an AI that can solve Masterminde everytime in 5 or less guesses
+- We made an AI that can solve mastermind every time in 5 or less guesses
 - We visualized the game
 - There is a player vs player mode
 - There is a lot of documentation
@@ -179,5 +191,5 @@ So in the end i think we did everything we set out to do.
 Knuth algorithm
 [StackOverflow](https://stackoverflow.com/questions/62430071/donald-knuth-algorithm-mastermind)
 
-Voorbeeld mastermind game
+Example mastermind game
 [Github](https://github.com/NathanDuran/Mastermind-Five-Guess-Algorithm)
