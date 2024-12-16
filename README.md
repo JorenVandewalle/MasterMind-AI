@@ -83,11 +83,13 @@ The game ends when the codebreaker correctly guesses the secret code or when the
 - **Sam De Wispelaere:**
    - Coding the AI solver
    - Coding pvp mode
+   - Documentatie
 
 - **Niels Denoo**
    - Combining the visuals with the game
    - Coding pvp mode
    - Powerpoint
+   - rapport
 
 ### 3. How do we make the Mastermind game in code?
 
