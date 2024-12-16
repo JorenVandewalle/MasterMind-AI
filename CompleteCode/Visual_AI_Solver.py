@@ -80,7 +80,7 @@ def knuth_mastermind_start(colors, positions):
     global possible_codes, all_codes, ai_guess, ai_attempts
     all_codes = list(itertools.product(colors, repeat=positions))
     possible_codes = all_codes[:]
-    ai_guess = tuple(colors[:2] * (positions // 2))
+    ai_guess = choose_next_guess(possible_codes)
     ai_attempts = 0
 
 def ai_step():

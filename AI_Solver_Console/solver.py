@@ -63,7 +63,7 @@ def knuth_mastermind(secret_code, colors, positions):
     possible_codes = all_codes[:]  # Start with all codes as possible solutions
 
     # Initial guess
-    guess ='R', 'R', 'G', 'G'
+    guess =choose_next_guess(possible_codes)
     attempts = 0
 
     print("Knuth's Mastermind Solver")
