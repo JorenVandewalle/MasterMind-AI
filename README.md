@@ -30,6 +30,8 @@
 
 ----
 
+## Analyze
+
 ### 1. Mastermind Game Rules
 
 #### Objective
@@ -160,7 +162,7 @@ To make it easy to play the game we also made an .exe file. This is done with th
 3. Make the .exe file: `python -m PyInstaller --noconsole --onefile your_file_name.py`
 4. You can find the .exe file in the **dist** folder.
 
-##### Result
+## Result
 
 After allot of trying and testing we got a game that has allot of the same layout of the board game and it is easy to use. This is the result:
 ![Visualization](./resources/images/full_game.png)
@@ -169,7 +171,7 @@ The code with first styling can be found [here](testVisual.py)
 
 ----
 
-## Expantions
+## Expansions
 
 - We could make the PvP mode visualized as well
 - We could add a timers for how long the Algorithm takes to solve the code.
