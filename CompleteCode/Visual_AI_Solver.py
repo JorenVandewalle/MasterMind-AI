@@ -6,30 +6,25 @@ pygame.init()
 screen = pygame.display.set_mode((500, 850))
 pygame.display.set_caption("Mastermind Solver")
 
-# Define colors
 BACKGROUND = (168, 181, 187)
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 WHITE = (255, 255, 255)
 
-# Define the font
 font = pygame.font.Font(None, 30)
 
-# Button positions and colors
 interactive_button_radius = 30
 button_positions = [(100, 60), (250, 60), (400, 60), (100, 125), (250, 125), (400, 125)]
 button_colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (255, 165, 0), (0, 255, 255)]
 
-# Secret Code Input
 selected_circle_index = 0
 secret_code = []
 
-# Circle Positions and Colors
 circle_radiusSmall = 8
 circle_radiusLarge = 20
 
 circle_positionsPrCode = [(195, 205), (265, 205), (335, 205), (405, 205)]
-circle_colorsPrCode = [(128, 141, 147)] * 4  # Placeholder
+circle_colorsPrCode = [(128, 141, 147)] * 4
 
 circle_positions_large = [
     [(145, 275 + 70 * i), (215, 275 + 70 * i), (285, 275 + 70 * i), (355, 275 + 70 * i)] for i in range(7)
@@ -40,7 +35,7 @@ circle_positions_small = [
     [(62 + j * 25, 262 + 70 * i) for j in range(2)] + [(62 + j * 25, 287 + 70 * i) for j in range(2)]
     for i in range(7)
 ]
-circle_colors_small = [[(128, 141, 147)] * 4 for _ in range(7)]  # Black and white feedback
+circle_colors_small = [[(128, 141, 147)] * 4 for _ in range(7)]
 
 # Game State
 game_started = False
@@ -89,8 +84,7 @@ def ai_step():
     if not game_started:
         return
 
-    # Add a small delay before displaying the next guess
-    pygame.time.wait(500)  # Wait for 500 milliseconds (0.5 seconds)
+    pygame.time.wait(500)
 
     # Calculate feedback and display the guess
     feedback = calculate_feedback(ai_guess, tuple(secret_code))
@@ -100,7 +94,6 @@ def ai_step():
     for i in range(feedback[0], feedback[0] + feedback[1]):
         circle_colors_small[ai_attempts][i] = WHITE
 
-    # Check if AI solved it
     if feedback == (4, 0):
         game_started = False
         print(f"AI solved the code in {ai_attempts + 1} attempts!")
@@ -118,7 +111,6 @@ def draw_button():
         pygame.draw.circle(screen, color, position, interactive_button_radius - 2)
 
 def draw_layout():
-    # Main layout and secret code circles
     pygame.draw.rect(screen, BACKGROUND, (50, 25, 400, 135))
     pygame.draw.rect(screen, BLACK, (50, 25, 400, 135), 2)
 
@@ -131,7 +123,6 @@ def draw_layout():
     for position, color in zip(circle_positionsPrCode, circle_colorsPrCode):
         pygame.draw.circle(screen, color, position, circle_radiusLarge)
 
-    # Draw guesses and feedback
     for row, (positions, colors_large, colors_small) in enumerate(
         zip(circle_positions_large, circle_colors_large, circle_colors_small)
     ):
@@ -140,7 +131,6 @@ def draw_layout():
         for position, color in zip(circle_positions_small[row], colors_small):
             pygame.draw.circle(screen, color, position, circle_radiusSmall)
 
-    # Draw the play button
     pygame.draw.rect(screen, GREEN, (200, 730, 100, 40))
     pygame.draw.rect(screen, BLACK, (200, 730, 100, 40), 2)
     play_text = font.render("Play", True, BLACK)
@@ -176,7 +166,7 @@ while run:
         if event.type == pygame.QUIT:
             run = False
         elif event.type == pygame.MOUSEBUTTONDOWN:
-            if event.button == 1:  # Left mouse button
+            if event.button == 1:
                 for index, position in enumerate(button_positions):
                     if (position[0] - event.pos[0]) ** 2 + (position[1] - event.pos[1]) ** 2 <= interactive_button_radius ** 2:
                         if selected_circle_index < 4:
@@ -184,13 +174,12 @@ while run:
                             circle_colorsPrCode[selected_circle_index] = button_colors[index]
                             selected_circle_index += 1
 
-                # Check Play button click
+                
                 if (200 <= event.pos[0] <= 300) and (730 <= event.pos[1] <= 770):
                     if len(secret_code) == 4:
                         knuth_mastermind_start("RGBYOC", 4)
                         game_started = True
 
-                # Check Restart button click
                 if (150 <= event.pos[0] <= 350) and (780 <= event.pos[1] <= 820):
                     reset_game()
 
@@ -200,7 +189,7 @@ while run:
     screen.fill((68, 81, 87))
     draw_layout()
     draw_button()
-    if not game_started:  # Only show Restart button if the game is not ongoing
+    if not game_started:
         draw_restart_button()
     pygame.display.flip()
 
