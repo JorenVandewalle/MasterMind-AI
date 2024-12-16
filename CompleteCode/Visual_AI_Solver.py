@@ -3,18 +3,19 @@ import itertools
 from collections import Counter
 
 pygame.init()
-screen = pygame.display.set_mode((500, 850))
+screen = pygame.display.set_mode((500, 750))
 pygame.display.set_caption("Mastermind Solver")
 
 BACKGROUND = (168, 181, 187)
 BLACK = (0, 0, 0)
 GREEN = (0, 255, 0)
 WHITE = (255, 255, 255)
+ORANGE = (255, 165, 0)
 
 font = pygame.font.Font(None, 30)
 
-interactive_button_radius = 30
-button_positions = [(100, 60), (250, 60), (400, 60), (100, 125), (250, 125), (400, 125)]
+interactive_button_radius = 25
+button_positions = [(100, 40), (250, 40), (400, 40), (100, 95), (250, 95), (400, 95)]
 button_colors = [(255, 0, 0), (0, 255, 0), (0, 0, 255), (255, 255, 0), (255, 165, 0), (0, 255, 255)]
 
 selected_circle_index = 0
@@ -23,16 +24,16 @@ secret_code = []
 circle_radiusSmall = 8
 circle_radiusLarge = 20
 
-circle_positionsPrCode = [(195, 205), (265, 205), (335, 205), (405, 205)]
+circle_positionsPrCode = [(195, 160), (265, 160), (335, 160), (405, 160)]
 circle_colorsPrCode = [(128, 141, 147)] * 4
 
 circle_positions_large = [
-    [(145, 275 + 70 * i), (215, 275 + 70 * i), (285, 275 + 70 * i), (355, 275 + 70 * i)] for i in range(7)
+    [(185, 220 + 70 * i), (255, 220 + 70 * i), (325, 220 + 70 * i), (395, 220 + 70 * i)] for i in range(7)
 ]
 circle_colors_large = [[(128, 141, 147)] * 4 for _ in range(7)]
 
 circle_positions_small = [
-    [(62 + j * 25, 262 + 70 * i) for j in range(2)] + [(62 + j * 25, 287 + 70 * i) for j in range(2)]
+    [(100 + j * 25, 210 + 70 * i) for j in range(2)] + [(100 + j * 25, 235 + 70 * i) for j in range(2)]
     for i in range(7)
 ]
 circle_colors_small = [[(128, 141, 147)] * 4 for _ in range(7)]
@@ -111,15 +112,15 @@ def draw_button():
         pygame.draw.circle(screen, color, position, interactive_button_radius - 2)
 
 def draw_layout():
-    pygame.draw.rect(screen, BACKGROUND, (50, 25, 400, 135))
-    pygame.draw.rect(screen, BLACK, (50, 25, 400, 135), 2)
+    pygame.draw.rect(screen, BACKGROUND, (50, 10, 400, 115))
+    pygame.draw.rect(screen, BLACK, (50, 10, 400, 115), 2)
 
     private_code_text = font.render("Private", True, BLACK)
     private_code_text2 = font.render("Code:", True, BLACK)
-    screen.blit(private_code_text, (50, 180))
-    screen.blit(private_code_text2, (50, 200))
-    pygame.draw.rect(screen, BACKGROUND, (155, 180, 290, 50))
-    pygame.draw.rect(screen, BLACK, (155, 180, 290, 50), 2)
+    screen.blit(private_code_text, (50, 135))
+    screen.blit(private_code_text2, (50, 155))
+    pygame.draw.rect(screen, BACKGROUND, (155, 135, 290, 50))
+    pygame.draw.rect(screen, BLACK, (155, 135, 290, 50), 2)
     for position, color in zip(circle_positionsPrCode, circle_colorsPrCode):
         pygame.draw.circle(screen, color, position, circle_radiusLarge)
 
@@ -131,18 +132,25 @@ def draw_layout():
         for position, color in zip(circle_positions_small[row], colors_small):
             pygame.draw.circle(screen, color, position, circle_radiusSmall)
 
-    pygame.draw.rect(screen, GREEN, (200, 730, 100, 40))
-    pygame.draw.rect(screen, BLACK, (200, 730, 100, 40), 2)
-    play_text = font.render("Play", True, BLACK)
-    text_rect = play_text.get_rect(center=(250, 750))
-    screen.blit(play_text, text_rect)
+    
 
-def draw_restart_button():
-    pygame.draw.rect(screen, WHITE, (150, 780, 200, 40))
-    pygame.draw.rect(screen, BLACK, (150, 780, 200, 40), 2)
+
+def draw_game_function_btns():
+    # Play button
+    pygame.draw.rect(screen, GREEN, (200, 670, 100, 40))
+    pygame.draw.rect(screen, BLACK, (200, 670, 100, 40), 2)
+    play_text = font.render("Play", True, BLACK)
+    text_rect = play_text.get_rect(center=(250, 690))
+    screen.blit(play_text, text_rect)
+    # Restart button
+    pygame.draw.rect(screen, ORANGE, (150, 715, 200, 40))
+    pygame.draw.rect(screen, BLACK, (150, 715, 200, 40), 2)
     restart_text = font.render("Restart", True, BLACK)
-    text_rect = restart_text.get_rect(center=(250, 800))
+    text_rect = restart_text.get_rect(center=(250, 735))
     screen.blit(restart_text, text_rect)
+
+
+    
 
 def reset_game():
     global game_started, ai_attempts, possible_codes, all_codes, ai_guess, feedback
@@ -175,12 +183,13 @@ while run:
                             selected_circle_index += 1
 
                 
-                if (200 <= event.pos[0] <= 300) and (730 <= event.pos[1] <= 770):
+                if (200 <= event.pos[0] <= 300) and (670 <= event.pos[1] <= 710):
                     if len(secret_code) == 4:
+                        print("Play btn clicked")
                         knuth_mastermind_start("RGBYOC", 4)
                         game_started = True
 
-                if (150 <= event.pos[0] <= 350) and (780 <= event.pos[1] <= 820):
+                if (150 <= event.pos[0] <= 350) and (715 <= event.pos[1] <= 755):
                     reset_game()
 
     if game_started:
@@ -190,7 +199,7 @@ while run:
     draw_layout()
     draw_button()
     if not game_started:
-        draw_restart_button()
+        draw_game_function_btns()
     pygame.display.flip()
 
 pygame.quit()
